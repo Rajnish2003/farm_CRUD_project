@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+  <h1><%=p.name%> : <%=p.id%></h1>
+  <h3>Cost per piece :<%=p.price%></h3>
+  <h3>Its category is :<a href="/?category=<%=p.category%>"><%=p.category%></a></h3>
+  <span><a href="/<%=p.id%>/edit">Edit</a></span>
+  <span><a href="/">Home</a></span>
+
+  <form action="/<%=p.id%>?_method=DELETE" method="post">
+    <button>Delete</button>
+  </form>
+</body>
+</html>

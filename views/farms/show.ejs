@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+    <h3><%=p.name%> : <%=p.id%> </h3>
+    <h5><%=p.city%> </h5>
+    <p>Email: <%=p.email%> </p>
+    <ul>
+      <h4>Products id are:</h4>
+    <% for(let i of p.products){ %> 
+      <li><p><%=i%> </p></li>
+      <%}%> 
+    </ul>
+    <a href="/farms/<%=p.id%> /new">Add products</a>
+    <a href="/farms">All farms</a>
+</body>
+</html>

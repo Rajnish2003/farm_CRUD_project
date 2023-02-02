@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit document</title>
+</head>
+<body>
+    <h1>ID: <%=p.id%> </h1>
+    <form action="/<%=p._id%>?_method=PUT" method="post">
+        <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="ProductName" value="<%=p.name%>">
+        <br>
+        <label for="price">Price:</label>
+            <input type="number" name="price" id="price" placeholder="price" value="<%=p.price%>">
+        <br>
+        <label for="category">Category  </label>
+            <select name="category" id="category">
+                <% for(let i of categories){ %> 
+                    <option value="<%=i%>" <%=p.category===i?'selected':''%> ><%=i%></option>
+                <% } %> 
+            </select> 
+        <br>
+        <button>SUBMIT</button>
+        <br>
+        <span><a href="/">Home</a></span>
+        <span><a href="/<%=p.id%> ">Back</a></span>
+</body>
+</html>
